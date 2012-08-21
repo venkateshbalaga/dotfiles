@@ -1,0 +1,20 @@
+[include]
+        path = gitconfig
+
+[core]
+	editor = Notepad2
+	autocrlf = true
+
+[merge]
+	tool = p4merge
+
+[mergetool "p4merge"]
+	path = c:/Program Files/Perforce/p4merge.exe
+	cmd = \"c:/Program Files/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+[diff]
+	guitool = xxdiff
+
+[difftool "xxdiff"]
+	path = \"C:/Program Files/TortoiseSVN/bin/TortoiseMerge.exe\"
+	cmd = \"c:/Program Files/TortoiseSVN/bin/TortoiseMerge.exe\" /base:\"$BASE\" /mine:\"$LOCAL\" /theirs:\"$REMOTE\" /merged:\"$MERGED\"
